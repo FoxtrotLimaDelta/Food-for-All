@@ -19,5 +19,9 @@ Switching to read the geoJSON file back in with dependency geojson
 
 index.html, container for JS script. from index.html location, terminal code: `$ python -m http.server`
 
+Need to create a config_bus.js file in js folder, and place api key there
+
+`api_key='<apikeyhere>'`
+
 
 
