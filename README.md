@@ -12,7 +12,6 @@ Logistic regression
 
 
 
-
 We seek to determine if the public transportation number of routes, times of routes, locations of routes, and frequency of routes is sufficient to assit citizens living in the food deserts of Maricopa County to reach accessible, affordable food in an efficient manner.  
 
 An example of why this is important:
@@ -41,4 +40,6 @@ non-partisan Center on Budget and Policy Priorities."
 to use their benefits to buy groceries online and get them delivered to their homes. During the pandemic, the Agriculture Department has raced to allow more states to sign on to the online expansion of food stamps. But 15 states still do not allow customers to redeem benefits online." 
 
 Retrieved from: 11/12/2020 Food deserts were a problem. The coronavirus has made them worse - CNN on 11/10/2020
+
+
 
