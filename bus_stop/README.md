@@ -23,5 +23,9 @@ Need to create a config_bus.js file in js folder, and place api key there
 
 `api_key='<apikeyhere>'`
 
+Needed to clean up City/Juris in the Bus_stop geoJSON file prior to effectively and easily group in Tableau.
 
+Created multiple tableau maps for Bus_stops and SNAP store locations.
+
+Overlay one map (with complete transparency except for points) ontop of the other. Ensure that map matches up.
 

@@ -31,7 +31,8 @@ mapGrayScale.addTo(map);
 
 //layer for bus stop data
 var busStopData = new L.LayerGroup(),
-lightRailData = new L.LayerGroup();
+lightRailData = new L.LayerGroup(),
+snapData = new L.LayerGroup();
 
 var mapOptions = {
     // Grayscale: mapGrayScale,
@@ -39,8 +40,8 @@ var mapOptions = {
     Outdoors: mapOutdoors
 },
 overLays = {
-    "Light Rail":lightRailData,
-    'Bus Stop': busStopData
+    'Bus Stop': busStopData,
+    'Snap Stores': snapData
 };
 
 L.control.layers(mapOptions,overLays).addTo(map);
@@ -56,6 +57,13 @@ d3.json("https://opendata.arcgis.com/datasets/ba0a1ffe10d444cd9a3e7c2060f6969f_0
              stroke:true, 
              weight: 1
          };
+    
+    }
+
+    var busData = L.geoJson(data, {filter: busFilter});
+
+    function busFilter(feature) {
+        if (feature.properties.Juris === "Phoenix") return true
     }
 
     //geoJson to map layers
@@ -69,33 +77,41 @@ d3.json("https://opendata.arcgis.com/datasets/ba0a1ffe10d444cd9a3e7c2060f6969f_0
         }
     }).addTo(busStopData);
 
+
     //make data visible by adding to map array
     busStopData.addTo(map);
 
     // light rail data entry
-    d3.json("https://opendata.arcgis.com/datasets/00a92b98e7fc4ef5999d68f9cb86c36f_1.geojson", function(data2) {
-    function styleFxn2(feature) {
-         return {
-             opacity: 0.75,
-             fillOpacity: 1,
-             fillColor: 'orange',
-             radius: 6,
-             stroke:true, 
-             weight: 1
-         };
-    }
-    //geoJson to map layers
-    L.geoJson(data2, {
-        pointToLayer: function(feature, latlng) {
-            return L.circleMarker(latlng);
-        },
-        style: styleFxn2,
-        onEachFeature: function(feature, layer) {
-            layer.bindPopup("Light Rail Station: " + feature.properties.StationName + "<br> City: " + feature.properties.Jurisdiction);
-        }
-    }).addTo(lightRailData);
+    d3.json("https://opendata.arcgis.com/datasets/e9cc76a48ccb45628181ece7b2deb56d_0.geojson", function(data2) {
+        var snap_location = L.geoJson(data2,
+        {filter: snapFilter}).addTo(snapData);
 
-    //make data visible by adding to map array
-    lightRailData.addTo(map);
+        function snapFilter(feature) {
+        if ((feature.properties.Zip5.startsWith("850"))||(feature.properties.Zip5.startsWith("852"))||(feature.properties.Zip5.startsWith("853")))  return true
+        }
+    // function styleFxn2(feature) {
+    //      return {
+    //          opacity: 0.75,
+    //          fillOpacity: 1,
+    //          fillColor: 'orange',
+    //          radius: 6,
+    //          stroke:true, 
+    //          weight: 1
+    //      };
+    // }
+    // //geoJson to map layers
+    // L.geoJson(data2, {
+    //     pointToLayer: function(feature, latlng) {
+    //         return L.circleMarker(latlng);
+    //     },
+    //     style: styleFxn2,
+    //     onEachFeature: function(feature, layer) {
+    //         layer.bindPopup("Light Rail Station: " + feature.properties.StationName + "<br> City: " + feature.properties.Jurisdiction);
+    //     }
+    // }).addTo(lightRailData);
+
+    // //make data visible by adding to map array
+    // lightRailData.addTo(map);
     });
+
 });
