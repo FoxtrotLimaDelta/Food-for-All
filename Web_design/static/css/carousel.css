@@ -35,16 +35,6 @@ body {
 }
 
 
-.overlay-image {
-
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right:0;
-  top: 0:
-  background-position: center;
-}
-
 /* MARKETING CONTENT
 -------------------------------------------------- */
 
@@ -89,7 +79,7 @@ body {
   }
 
   .featurette-heading {
-    font-size: 50px;
+    font-size: 100px;
   }
 }
 
@@ -98,3 +88,6 @@ body {
     margin-top: 7rem;
   }
 }
+
+
+

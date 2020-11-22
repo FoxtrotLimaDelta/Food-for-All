@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,8 +7,8 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <title>Carousel Template · Bootstrap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
 
@@ -31,7 +32,7 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="carousel.css" rel="stylesheet">
+    <link href="static/css/carousel.css" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -40,45 +41,40 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-        
-<div class="dropdown">
-  <a class="btn btn-secondary dropdown-toggle" href="index.html" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Food Deserts
-  </a>
-
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item" href="traditional.html">Traditional</a>
-    <a class="dropdown-item" href="redefined.html">Redefined</a>
-    <a class="dropdown-item" href="geomap.html">Interactive Map</a>
-  </div>
-</div>
-
-
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="about.html">About Us <span class="sr-only">(current)</span></a>
-        </li>   
+       
+         <li class="nav-item">
+          <a class="nav-link" href="traditional.html">Food Desert</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="foodstory.html">Food Story</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="research.html">Research</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="foodcalculator.html">Calculator</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="geomap.html">Maps</a>
+        </li>
+        
+         <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>  
+  </div>
+</div>
       </ul>
-
-        </form>
-    </div>
+      </div>
   </nav>
-
 </header>
 
+<main role="main">
 
-
-  <!-- Marketing messaging and featurettes
-  ================================================== -->
-  <!-- Wrap the rest of the page in another container to center all the content. -->
-
-  <div class="container marketing">
-
-
-      
-      
+ 
+  <!---==========================================================================->
 
     <!-- START THE FEATURETTES -->
 
@@ -86,29 +82,22 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">Redfining Food Desert  <span class="text-muted"></span></h2>
-        <p class="lead">Taking a deeper look into how the "tradtional" way of defining food deserts may impact local access.</p>
-      </div>
-      <div class="col-md-5">
-        <svg class="img-fluid mx-auto" width="500" height="500" img id="gayle lindgren" src="assets/images/desert-sunset-gayle lindgren.jpeg" alt="lindgren sunset"  >
+        <h2 class="featurette-heading">Our Research <span class="text-muted"></span></h2>
+       
+       </div>
+        <div class="col-md-5">
+        <iframe src="https://drive.google.com/file/d/1wtZwXM9FOtreVEs52IbP2VRsTj9axvK0/preview" width="640" height="480"></iframe>
+       
+      
+     
+      
+    
       </div>
     </div>
 
-    
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+   
 
     <hr class="featurette-divider">
 
@@ -125,7 +114,20 @@
 </main>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+
 </html>
+
+
+
+
+
+
