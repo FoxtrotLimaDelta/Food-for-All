@@ -7,7 +7,7 @@ Languages, modules, packages, and programs used in this project:
 geopy
 FLASK
 Python
-Pandaspostgress
+Pandaspostgress 
 Logistic regression
 
 
