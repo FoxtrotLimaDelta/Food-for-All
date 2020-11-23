@@ -36,7 +36,7 @@
   <body>
     <header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="index.html">Home</a>
+    <a class="navbar-brand" href="/">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -223,7 +223,7 @@
   <div class="form-group row">
     <label for="store_count" class="col-sm-2 col-form-label">Store Count</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" name="store_count">
+      <input type="text" class="form-control" name="store_count" value=2>
     </div>
   </div>
 
@@ -239,7 +239,15 @@
 
 <div class="row">
 
-    <label> <h2>The data you entered is considered:</h2></label>{predictedvalue}
+    <label> <h2>The data you entered is considered:</h2></label>{% if results %}
+    <h2>{{results.prediction}}</h2>
+    
+
+{% else %}
+    ""
+{% endif %}
+
+
     </div>
   
   </div>
