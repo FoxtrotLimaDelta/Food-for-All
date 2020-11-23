@@ -48,7 +48,7 @@ body {
 }
 .marketing .col-lg-4 p {
   margin-right: .75rem;
-  margin-left: .75rem;
+  margin-left: 1.5 rem;
 }
 
 
@@ -86,6 +86,7 @@ body {
 @media (min-width: 62em) {
   .featurette-heading {
     margin-top: 7rem;
+    margin-left: 7rem;
   }
 }
 
