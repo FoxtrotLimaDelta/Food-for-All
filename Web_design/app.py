@@ -1,4 +1,4 @@
-6# import necessary libraries
+# import necessary libraries
 import os
 from flask import (
     Flask,
@@ -11,17 +11,7 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 
-from config import username, password
 
-#engine = create_engine(os.environ.get('DATABASE_URL', ''))
-
-
-engine = create_engine(f'postgresql://{username}:{password}@localhost:5433/petpals')
-
-Base = automap_base()
-Base.prepare(engine, reflect=True)
-
-Pet = Base.classes.pets
 
 #################################################
 # Flask Setup
@@ -33,14 +23,15 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     return render_template("foodcalculator.html")
+# need routes for all html pages
+
+
 
 # Query the database and send the jsonified results
-@app.route("/send", methods=["GET", "POST"])
+@app.route("/send", methods=["POST"])
 def send():
 
-    session = Session(engine)
-
-    if request.method == "GET":
+    if request.method == "POST":
         ohu2010 = request.form["OHU2010"]
         numgqtrs = request.form["NUMGQTRS"]
         familyincome = request.form["MedianFamilyIncome"]
@@ -58,39 +49,23 @@ def send():
              
 
 
- pet = Pet(name=name, lat=lat, lon=lon)
-        session.add(pet)
-        session.commit()
+    input_data = [ohu2010,
+                  numgqtrs,
+                    familyincome,seniors,
+                    tractwhite,
+                    tractblack,
+                    tractasian,
+                    tracthopi,
+                    trackaian,  
+                    multir,
+                    hispanic,
+                    snap,
+                    busstop,
+                    storecount]
 
-        session.close()
 
 
-
-        return redirect("/", code=302)
-loading up a value and passing in the prediction 
-    return render_template("foodcalculator.html", answer = predictedvalue)
-
-
-@app.route("/api/pals")
-def pals():
-
-    session = Session(engine)
-
-    results = session.query(Pet.name, Pet.lat, Pet.lon).all()
-
-    names = [result[0] for result in results]
-    lat = [result[1] for result in results]
-    lon = [result[2] for result in results]
-
-    pet_data = {
-        "latitude": lat,
-        "longitude": lon,
-        "hover_text": names
-    }
-
-    session.close()
-
-    return jsonify(pet_data)
+    return jsonify(input_data)
 
 
 if __name__ == "__main__":
