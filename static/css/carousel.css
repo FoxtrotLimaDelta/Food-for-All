@@ -3,6 +3,7 @@
 /* Padding below the footer and lighter body text */
 
 body {
+  padding-left: 1rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
   color: #5a5a5a;
@@ -48,7 +49,7 @@ body {
 }
 .marketing .col-lg-4 p {
   margin-right: .75rem;
-  margin-left: .75rem;
+  margin-left: 1.5 rem;
 }
 
 
@@ -86,6 +87,7 @@ body {
 @media (min-width: 62em) {
   .featurette-heading {
     margin-top: 7rem;
+    margin-left: 7rem;
   }
 }
 
