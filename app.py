@@ -22,6 +22,8 @@ from sklearn.preprocessing import MinMaxScaler
 #################################################
 app = Flask(__name__)
 
+scaler = pickle.load(open("x_scale.sav", 'rb'))
+loaded_model = pickle.load(open("logistic_regression.sav", 'rb'))
 
 # create route that renders index.html template
 @app.route("/")
@@ -123,6 +125,5 @@ def traditional():
 
 
 if __name__ == "__main__":
-    scaler = pickle.load(open("x_scale.sav", 'rb'))
-    loaded_model = pickle.load(open("logistic_regression.sav", 'rb'))
+    
     app.run()
