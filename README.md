@@ -1,7 +1,5 @@
-# Food-for-All-Improving-Public-Transport-for-Food-Access
+# Food for All - Public Transportation for Food Access
 Analysis of public transportation to food sources from food deserts. 
-
-To run the project (until we deploy it to Heroku) anyone wishing to run the program needs to create their own config file including their password, port, and database name.
 
 Languages, modules, packages, and programs used in this project:
 geopy
