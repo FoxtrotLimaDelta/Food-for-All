@@ -3,13 +3,13 @@ Analysis of public transportation to food sources from food deserts.
 
 Food for All website: https://fooddeserts01.herokuapp.com 
 
-Languages, modules, packages, and programs used in this project:
+Languages, modules, packages, and tools used in this project:
 geopy, 
 FLASK,
 Python,
 Pandas,
 Postgress, 
-Logistic regression - MANOVA, ANOVA,Kmeans cluster,
+Logistic regression - MANOVA, ANOVA, Kmeans cluster,
 Heroku,
 Tableau,
 scikitlearn,
