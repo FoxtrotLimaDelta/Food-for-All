@@ -1,14 +1,20 @@
 # Food for All - Public Transportation for Food Access
 Analysis of public transportation to food sources from food deserts. 
 
+Food for All website: https://fooddeserts01.herokuapp.com 
+
 Languages, modules, packages, and programs used in this project:
-geopy
-FLASK
-Python
-Pandaspostgress 
-Logistic regression
-
-
+geopy, 
+FLASK,
+Python,
+Pandas,
+Postgress, 
+Logistic regression - MANOVA, ANOVA,Kmeans cluster,
+Heroku,
+Tableau,
+scikitlearn,
+HTML/CSS,
+Javascript,
 
 We seek to determine if the public transportation number of routes, times of routes, locations of routes, and frequency of routes is sufficient to assit citizens living in the food deserts of Maricopa County to reach accessible, affordable food in an efficient manner.  
 
