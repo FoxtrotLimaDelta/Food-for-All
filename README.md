@@ -16,7 +16,29 @@ scikitlearn,
 HTML/CSS,
 Javascript,
 
-We seek to determine if the public transportation number of routes, times of routes, locations of routes, and frequency of routes is sufficient to assit citizens living in the food deserts of Maricopa County to reach accessible, affordable food in an efficient manner.  
+The purpose of this project is to both validate the concept of food desert status and to uncover the factors that determine whether a household belongs to a “food desert” designated census tract by initially looking at a particularly area of Maricopa county in Arizona. We seek to make an impact with this data by determining if the public transportation number, times and, locations of routes, and frequency of routes is sufficient to assist citizens living in the food deserts of Maricopa County to reach accessible, affordable food in an efficient manner. Depending on the outcome, this data may be helpful or and can be shared with government and non-profit organizations to act appropriately.
+
+All sections of the project used data from the USDA Food Access Research Atlas, we considered several economic factors (i.e., poverty levels within the census tract), demographic factors (children, elders, or specific ethnicities in the population), and practical factors like number of grocery stores, percent of households with no vehicle, and number of bus stops within a tract. 
+
+Python Pandas was used to read, clean, and organize data.
+
+Bus Stop Data pulled by/from: 
+  Using API for ARCOGIS for Valley Metro has a 50token a month limit. 
+  Utilizing KML files. To read in KML files, ... utilizing direct geojson links (directly in file ..._create_artifact)
+  ```
+  $ pip install geopandas and fiona (if necessary)
+  ```
+  Using geopandas to read in your geojson file/url/api. 
+  So as to not continue to make requests to host server (unless needing live data), utilize geopandas write function to write ```to_file("filename.geojson", Driver='geoJSON')     ```~after writing geopandas, environment stopped liking geopandas. Switching to read the geoJSON file back in with dependency geojson; index.html, container for JS script.        from index.html location, terminal code: `$ python -m http.server`
+
+Food Desert Data pulled by/from: 
+  Using Python Pandas to load data – 
+  foodAccessData_csv = os.path.join('Resources', 'AZ Food Access Research Atlas.csv')
+
+  Using Python SQL toolkit and Object Relational Mapper – creating postgress database.
+
+Served up project on Heroku
+ 
 
 An example of why this is important:
 
